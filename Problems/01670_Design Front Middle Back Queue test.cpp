@@ -1,3 +1,6 @@
+# include <bits/stdc++.h>
+using namespace std;
+
 class FrontMiddleBackQueue {
 public:
     struct Node
@@ -134,3 +137,32 @@ public:
  * int param_5 = obj->popMiddle();
  * int param_6 = obj->popBack();
  */
+
+int main()
+{
+    FrontMiddleBackQueue q;
+
+    cout<<"Initial -->"<<endl;
+    q.display();
+
+    for(int i=1;i<=10;i++)
+    {
+        // q.pushFront(i); cout<<"PushFront--> "<<i<<endl;
+        // q.pushMiddle(i); cout<<"PushMiddle--> "<<i<<endl;
+        q.pushBack(i); cout<<"PushBack--> "<<i<<endl;
+        // q.display();
+    }
+
+    cout<<"\nAfter insertion -->"<<endl;
+    q.display();
+
+    int cnt = 10;
+    while(cnt--)
+    {
+        // cout<<"#"<<(10 - cnt)<<" -->     "<<"PopFront = "<<q.popFront()<<endl;
+        cout<<"#"<<(10 - cnt)<<" -->     "<<"PopMiddle = "<<q.popMiddle()<<endl;
+        q.display();
+    }
+
+    return 0;
+}
